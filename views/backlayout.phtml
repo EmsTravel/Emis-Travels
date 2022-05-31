@@ -1,0 +1,41 @@
+  <!doctype html>
+  <html lang="en">
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="">
+      <title>Backpack in one hand Backend</title>
+      <link rel="stylesheet" href="assets/css/styleprojet.css">
+  </head>
+
+  <header>
+      <?php if(isset($_SESSION['user'])): ?>
+    <nav>
+    <ul>
+      <li>Admin</li>
+        <li><a class="nav-link" href="index.php?page=logout">Sign out</a></li>
+    </ul>
+    </nav>
+</header>
+
+      <?php endif; ?>
+  </header>
+
+  <main class='container-back'>
+      <?php if(isset($_SESSION['user'])): ?>
+
+  <div class="sidenav">
+        <a href="index.php?page=commentsBack">Comments</a>
+        <a href="#clients">Photos</a>
+        <a href="#contact">Contact</a>
+  </div>
+  <?php endif; ?>
+
+  <?php include $template ?>
+  
+  </main>
+  
+  <script src="js/script.js"></script>
+    </body>
+  </html>
+

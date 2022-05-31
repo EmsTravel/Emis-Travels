@@ -1,0 +1,18 @@
+<div class="main-back">
+    <table class='side-table'>
+    <thead>
+        <tr>
+            <th>Email</th>
+            <th>Comments</th>
+        </tr>
+    </thead>
+    <tbody class='table-line'>
+        <?php foreach($comments as $comment):?>
+        <tr>
+            <td><?= htmlspecialchars($comment['email'])?></td>
+            <td><?= htmlspecialchars($comment['text'])?></td>
+        </tr>
+        <?php endforeach;?>
+</div>
+</tbody>
+</table>
